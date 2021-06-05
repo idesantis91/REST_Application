@@ -1,19 +1,27 @@
 package com.example.restservice;
 
-import java.util.concurrent.atomic.AtomicLong;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import java.util.List;
 
 @RestController
 public class RESTController {
 
-    private static final String template = "Hello , %s!";
-    private final AtomicLong counter = new AtomicLong();
+    @Autowired
+    private GreetingService greetingservice;
 
+    // Request ID and Message
     @GetMapping("/greeting")
-    public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
-        return new Greeting(counter.incrementAndGet(), String.format(template, name));
+    public Greeting greeting(@RequestParam(value = "id", defaultValue = "0") String id,
+            @RequestParam(value = "content") String content) {
+        // Get message and return the number of words
+        return greetingservice.create(id, content);
+    }
+
+    @GetMapping("/find")
+    public List<Greeting> find() {
+        return greetingservice.findAll();
     }
 }
