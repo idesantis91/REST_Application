@@ -1,5 +1,5 @@
 # REST_Application
-Submission for Code Challenge at LifeWay
+Submission for LifeWay Code Challenge
 
 # Build/Run Instructions
 - Clone GitHub Repo
