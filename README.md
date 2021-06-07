@@ -6,6 +6,7 @@ Submission for Code Challenge at LifeWay
 - In CMD, CD into target folder (cd REST_Application/rest-service/target/)
 - Run java -jar rest-service-0.0.1-SNAPSHOT.jar
 - Open localhost:8080/count?id=(enter ID here)&content=(Enter Message here)
+- On screen should return count of length of messages recieved to that endpoint
 
 ## Requirements
 - [x] Create a REST service with a single endpoint that accepts a json message with two fields.."id" and "message". (example: { "id": "123", "message": "hello world" })
