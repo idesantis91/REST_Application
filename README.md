@@ -8,6 +8,11 @@ Submission for LifeWay Code Challenge
 - Open localhost:8080/count?id=(enter ID here)&content=(Enter Message here)
 - On screen should return count of length of messages recieved to that endpoint
 
+## Screenshot DEMO
+![REST-Snap](https://user-images.githubusercontent.com/42743832/121051522-86bd5700-c787-11eb-8d73-c53cf77bb5b5.PNG)
+![REST-SnapTwo](https://user-images.githubusercontent.com/42743832/121051524-8755ed80-c787-11eb-845f-85dce4177115.PNG)
+
+
 ## Requirements
 - [x] Create a REST service with a single endpoint that accepts a json message with two fields.."id" and "message". (example: { "id": "123", "message": "hello world" })
 - [x] The endpoint should return a json document with a single field "count" that contains the total number of words contained in all the messages received to that point.
