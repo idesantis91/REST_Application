@@ -6,7 +6,8 @@ Submission for LifeWay Code Challenge
 - In CMD, CD into target folder (cd REST_Application/rest-service/target/)
 - Run java -jar rest-service-0.0.1-SNAPSHOT.jar
 - Open localhost:8080/count?id=(enter ID here)&content=(Enter Message here)
-- On screen should return count of length of messages recieved to that endpoint
+- On screen should return count of length of messages recieved to that endpoint  
+(Duplicate IDs will be ignored and make the count screen go blank but will reappear after an id with no duplicate has been entered)
 
 ## Screenshot DEMO
 ![REST-Snap](https://user-images.githubusercontent.com/42743832/121051522-86bd5700-c787-11eb-8d73-c53cf77bb5b5.PNG)
