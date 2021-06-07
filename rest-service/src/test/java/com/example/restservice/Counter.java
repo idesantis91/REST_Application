@@ -1,9 +1,11 @@
 package com.example.restservice;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class Counter {
 
+    @JsonIgnore
     private String id;
-
     public long count;
 
     public Counter(String id, long count) {
