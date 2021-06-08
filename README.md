@@ -8,7 +8,8 @@
 - In CMD, CD into target folder (cd REST_Application/rest-service/target/)
 - Run java -jar rest-service-0.0.1-SNAPSHOT.jar
 - Open localhost:8080/count?id=(enter ID here)&content=(Enter Message here)
-- On screen should return count of length of messages recieved to that endpoint  
+- On screen should return count of length of messages recieved to that endpoint
+- Make sure there is local MongoDB server running on the machine. This can cause the MongoDB Repos to fail   
 (Duplicate IDs will be ignored and make the count screen go blank but will reappear after an id with no duplicate has been entered)
 
 ## Screenshot DEMO
