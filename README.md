@@ -1,5 +1,7 @@
 # REST_Application
-Submission for LifeWay Code Challenge
+## Submission for LifeWay Code Challenge
+- Thanks for the challenge!
+- This was my first Springboot application and I learned alot!
 
 # Build/Run Instructions
 - Clone GitHub Repo
@@ -12,7 +14,6 @@ Submission for LifeWay Code Challenge
 ## Screenshot DEMO
 ![REST-Snap](https://user-images.githubusercontent.com/42743832/121051522-86bd5700-c787-11eb-8d73-c53cf77bb5b5.PNG)
 ![REST-SnapTwo](https://user-images.githubusercontent.com/42743832/121051524-8755ed80-c787-11eb-845f-85dce4177115.PNG)
-
 
 ## Requirements
 - [x] Create a REST service with a single endpoint that accepts a json message with two fields.."id" and "message". (example: { "id": "123", "message": "hello world" })
