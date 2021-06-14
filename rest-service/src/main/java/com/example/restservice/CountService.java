@@ -1,6 +1,8 @@
 package com.example.restservice;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -31,12 +33,12 @@ public class CountService {
     // }
 
     // Count Operation
-    public Count count(String id, String content, long count) {
+    public ResponseEntity<?> count(String id, String content, long count) {
         if (countRepository.existsById(id)) {
             System.out.println("This ID already exists.");
-            return null;
+            return new ResponseEntity<String>("This ID already exists", HttpStatus.CONFLICT);
         } else {
-            return countRepository.save(new Count(id, count));
+            return new ResponseEntity<Count>(countRepository.save(new Count(id, count)), HttpStatus.ACCEPTED);
         }
 
     }

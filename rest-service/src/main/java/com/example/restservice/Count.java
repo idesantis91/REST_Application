@@ -2,6 +2,7 @@ package com.example.restservice;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+//Count Object
 public class Count {
 
     @JsonIgnore
@@ -14,7 +15,6 @@ public class Count {
     }
 
     // Getters
-
     public String getId() {
         return id;
     }

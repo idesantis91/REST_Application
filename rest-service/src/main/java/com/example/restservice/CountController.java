@@ -1,6 +1,7 @@
 package com.example.restservice;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,8 +13,6 @@ public class CountController {
 
     @Autowired
     private CountService countService;
-    @Autowired
-    private CountRepository counterRepository;
 
     // Request ID and Message
     // @GetMapping("/greeting")
@@ -35,21 +34,16 @@ public class CountController {
 
     // Request ID and Message
     @GetMapping("/count")
-    public Count count(@RequestParam(value = "id", defaultValue = "0") String id,
+    public ResponseEntity<?> count(@RequestParam(value = "id") String id,
             @RequestParam(value = "content") String content, Long count) {
-        if (counterRepository.existsById(id)) {
-            System.out.println("This ID already exists.");
-            return null;
-        } else {
-            StringTokenizer tokens = new StringTokenizer(content);
-            System.out.println(tokens.countTokens());
-            return countService.count(id, content, val.addAndGet(tokens.countTokens()));
-        }
+        StringTokenizer tokens = new StringTokenizer(content);
+        System.out.println(tokens.countTokens());
+        return countService.count(id, content, val.addAndGet(tokens.countTokens()));
     }
 
     // Find all entries of counter
     // @GetMapping("/find")
-    // public List<Counter> find() {
-    // return counterservice.findAll();
+    // public List<Count> find() {
+    // return countService.findAll();
     // }
 }
